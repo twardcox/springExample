@@ -1,11 +1,10 @@
-package com.madscientistlaboratories.songr;
+package com.madscientistlaboratories.songr.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import java.util.*;
 
 @Controller
 public class HomeController {
@@ -44,10 +43,10 @@ public class HomeController {
 
   protected static String reverseWord(String str){
     String[] words = str.split("\\s");
-    Collections.reverse(Arrays.asList(words));
+//    Collections.reverse(Arrays.asList(words));
     StringBuilder reverseWord = new StringBuilder();
     for(String w:words){
-      reverseWord.append(w).append(" ");
+      reverseWord.insert(0, w).insert(0," ");
     }
     return reverseWord.toString().trim();
   }
