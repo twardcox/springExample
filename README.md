@@ -6,7 +6,10 @@ navigate to songr/src/main/java/com.madscientistlaboratories.songr/HomeControlle
 Select the start server.
 start your browser and navigate to localhost:8080 using the following:
 
-"/"
-"/sayhello/{name}"
-"/capitalize/{name}"
-"/reverse"
+"/"  
+"/sayhello/{name}"  
+"/capitalize/{name}"  
+"/reverse"  
+
+# Albums
+"/albums"  
