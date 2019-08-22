@@ -1,24 +1,27 @@
 package com.madscientistlaboratories.songr.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
+import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
 public class Album {
 
 //  instance Variables
-  @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long Id;
+ @Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+long id;
+
   String title;
   String artist;
   int songCount;
   int length;
   String imageUrl;
+
+  @OneToMany(fetch = FetchType.EAGER, mappedBy = "album")
+  List<Song> songs;
+
+
 
   public Album(){}
 
@@ -35,11 +38,11 @@ public class Album {
 
 
   public long getId() {
-    return Id;
+    return id;
   }
 
   public void setId(long id) {
-    Id = id;
+    this.id = id;
   }
 
   public String getTitle() {
