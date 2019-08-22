@@ -20,9 +20,6 @@ import java.util.List;
 
     @GetMapping("/albums")
     public String getAllAlbums(Model m) {
-//        Album theAlbum = new Album("Forrest Gump", "Robert Zemeckis", Date.valueOf("1994-07-06"), 72.0, "PG-13");
-//        Album secondAlbum = new Album("Shawshank Redemption", "Frank Darabont", Date.valueOf("1994-09-23"), 91.0, "R");
-//        Album[] albums = new Album[]{theMovie, secondMovie};
       List<Album> albums = albumRepository.findAll();
       m.addAttribute("albums", albums);
       return "albums";
