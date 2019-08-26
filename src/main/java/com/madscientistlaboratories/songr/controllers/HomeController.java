@@ -41,7 +41,7 @@ public class HomeController {
     return "reverseword";
   }
 
-  protected static String reverseWord(String str){
+  public static String reverseWord(String str){
     String[] words = str.split("\\s");
 //    Collections.reverse(Arrays.asList(words));
     StringBuilder reverseWord = new StringBuilder();
