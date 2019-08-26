@@ -1,6 +1,5 @@
 package com.madscientistlaboratories.songr.controllers;
 
-
 import com.madscientistlaboratories.songr.models.Album;
 import com.madscientistlaboratories.songr.models.AlbumRepository;
 import com.madscientistlaboratories.songr.models.Song;
@@ -19,6 +18,7 @@ import java.util.List;
     public class SongController{
         @Autowired
         SongRepository songRepository;
+
         @Autowired
         AlbumRepository albumRepository;
 
